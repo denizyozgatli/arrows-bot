@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo. & adb devices 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & set \"ADB_HOST=127.0.0.1\" & python -c \"import cv2, numpy as np, os; from arrows_bot.adb import connection; raw=connection.screencap(); assert raw, 'empty screencap'; img=cv2.imdecode(np.frombuffer(raw, dtype=np.uint8), cv2.IMREAD_COLOR); assert img is not None, 'decode failed'; h,w=img.shape[:2]; assert (h,w)==(2400,1080), f'unexpected size {h}x{w}'; out='data/raw/easy/shot_0007.png'; cv2.imwrite(out, img); print('saved', out, 'size', w, 'x', h, 'bytes', os.path.getsize(out))\" 2>&1)",
+      "Bash(echo. & dir /S /B \"C:\\Users\\deniz\\Desktop\\arrows-bot\\data\\raw\\easy\" 2>&1)",
+      "Bash(echo. & adb devices 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & set \"ADB_HOST=127.0.0.1\" & python -c \"import cv2, numpy as np, os; from arrows_bot.adb import connection; raw=connection.screencap(); assert raw, 'empty screencap'; img=cv2.imdecode(np.frombuffer(raw, dtype=np.uint8), cv2.IMREAD_COLOR); assert img is not None, 'decode failed'; h,w=img.shape[:2]; assert (h,w)==(2400,1080), f'unexpected size {h}x{w}'; out='data/raw/easy/shot_0008.png'; cv2.imwrite(out, img); print('saved', out, 'size', w, 'x', h, 'bytes', os.path.getsize(out))\" 2>&1)",
+      "Bash(echo. & dir /S /B \"C:\\Users\\deniz\\Desktop\\arrows-bot\\data\\raw\\easy\" 2>&1)",
+      "Bash(echo. & del \"C:\\Users\\deniz\\Desktop\\arrows-bot\\_threshold_sweep.py\" 2>&1 & echo cleaned)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\\run.py\" 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\\analyze.py\" 2>&1)",
+      "Bash(echo. & dir /B \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\\patches\" 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\\categorize.py\" 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\\categorize2.py\" 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\\color.py\" 2>&1)",
+      "Bash(echo. & rmdir /S /Q \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\" 2>&1 & echo cleaned)",
+      "Bash(echo. & if exist \"C:\\Users\\deniz\\AppData\\Local\\Temp\\fp_analysis\" (echo STILL EXISTS) else (echo REMOVED))",
+      "Bash(echo. & dir /S /B \"C:\\Users\\deniz\\Desktop\\arrows-bot\\data\" 2>&1 & echo === & dir /B \"C:\\Users\\deniz\\Desktop\\arrows-bot\\docs\" 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python -m arrows_bot.eval.cli --help 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python \"C:\\Users\\deniz\\AppData\\Local\\Temp\\verify_collect.py\" 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & set \"ADB_HOST=127.0.0.1\" & python -m arrows_bot.eval.cli evaluate --data data/raw --annotations data/annotations --out results --dist 20 2>&1)",
+      "Bash(echo. & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & set \"ADB_HOST=127.0.0.1\" & python -m arrows_bot.eval.cli collect-level --level-id level_2298 --difficulty easy --count 1 2>&1)",
+      "Bash(echo. & dir /S /B \"C:\\Users\\deniz\\Desktop\\arrows-bot\\data\\raw\\level_2298\" 2>&1 & echo === & set PYTHONPATH=C:\\Users\\deniz\\Desktop\\arrows-bot\\src & python -m arrows_bot.eval.cli validate-level --level-id level_2298 2>&1)"
+    ]
+  }
+}

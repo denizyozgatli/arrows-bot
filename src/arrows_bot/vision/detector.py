@@ -10,6 +10,7 @@ class Arrow:
     direction: str
     tap_point: Tuple[int, int]
     offset: int  # Okun merkezinden ucuna olan piksel mesafesi
+    score: float = 0.0  # TM_CCOEFF_NORMED match score
 
 class ArrowDetector:
     def __init__(self):
@@ -72,7 +73,7 @@ class ArrowDetector:
             
             # Okun kendi gövdesini yanlışlıkla engel sanmamak için kafasından güvenli bir çıkış noktası hesaplıyoruz (+4 piksel)
             safe_offset = int(th / 2) + 4 
-            arrows.append(Arrow(id=idx, head=(cx, cy), direction=direction, tap_point=(cx, cy), offset=safe_offset))
+            arrows.append(Arrow(id=idx, head=(cx, cy), direction=direction, tap_point=(cx, cy), offset=safe_offset, score=score))
             visited.append((cx, cy))
             idx += 1
 
