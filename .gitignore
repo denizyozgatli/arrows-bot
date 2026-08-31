@@ -69,3 +69,6 @@ tmp/
 temp/
 *.tmp
 *.bak
+
+# Abacus AI local configuration
+.abacusai
