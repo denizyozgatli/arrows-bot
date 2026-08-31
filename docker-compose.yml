@@ -1,0 +1,19 @@
+services:
+  arrows-bot:
+    build: .
+    container_name: arrows-bot
+    volumes:
+      - ./src:/app/src
+      - ./calibration:/app/calibration
+      - ./logs:/app/logs
+    environment:
+      # Host makinede (Windows) çalışan adb server'a bağlanıyoruz.
+      # host.docker.internal, Docker Desktop (WSL2 backend) üzerinde
+      # Windows host'a işaret eder.
+      - ADB_SERVER_HOST=host.docker.internal
+      - ADB_SERVER_PORT=5037
+      - DEVICE_SERIAL=${DEVICE_SERIAL:-}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    stdin_open: true
+    tty: true
